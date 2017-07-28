@@ -70,7 +70,7 @@ def user_login(request):
                 return HttpResponseRedirect('/users/')
 
             else:
-                return HttpResponse("Your Rango account is disabled.")
+                return HttpResponse("Your account is disabled.")
 
         else:
             print "Invalid login details:{0},{1}".format(username,password)

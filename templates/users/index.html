@@ -1,3 +1,18 @@
-<a href="/users/register/">Register Here</a><br />
-<a href="/users/login/">Login</a>
-<a href="/users/logout/">Logout</a>
+{% if user.is_authenticated %}
+
+    <h1>hello {{ user.username }},Thanks for you login!</h1>
+
+    <h4>Do you want to
+
+    <a href="/users/logout/">Logout</a>?</h4>
+
+{% else %}
+    <h1>please login first!</h1>
+
+    <a href="/users/login/">Login</a>
+
+    <h1>if You no have account</h1>
+
+    <a href="/users/register/">Register Here</a><br />
+
+{% endif %}
